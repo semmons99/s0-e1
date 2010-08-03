@@ -11,7 +11,7 @@ module Dominion
       end
 
       def special_action
-        n = @game.ask('how many card to discard?')
+        n = game.ask('how many card to discard?')
         owner.hand.discard(n)
         owner.draw(n)
       end

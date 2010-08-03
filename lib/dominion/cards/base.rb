@@ -1,7 +1,7 @@
 module Dominion
   module Cards
     class Base
-      attr_reader :owner
+      attr_reader :game, :owner
 
       def initialize(game, owner = nil)
         @game  = game
