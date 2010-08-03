@@ -2,9 +2,9 @@ require 'dominion/cards/victory_point_cards/victory_point_base'
 
 module Dominion
   module Cards
-    class Dutchy < Dominion::Cards::VictoryPointBase
+    class Duchy < Dominion::Cards::VictoryPointBase
       def name
-        "Dutchy"
+        "Duchy"
       end
 
       def value
