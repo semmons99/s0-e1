@@ -8,6 +8,7 @@ module Dominion
       def setup
         super
         @cost  = 4
+        @description = "For every 10 cards in your deck, gain 1 victory point, rounded down."
       end
 
       def value

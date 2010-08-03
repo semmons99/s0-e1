@@ -7,6 +7,7 @@ module Dominion
         super
         @cost    = 4
         @subtype = :action_attack
+        @description = "All other players must discard cards from their hand until they have only 3 remaining. Players with three or fewer cards do not discard any cards."
       end
 
       def special_action
