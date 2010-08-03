@@ -3,28 +3,16 @@ require 'dominion/cards/base'
 module Dominion
   module Cards
     class ActionBase < Dominion::Cards::Base
-      def type
-        :action
-      end
+      attr_reader :type, :subtype, :actions, :buys, :cards, :gold
 
-      def subtype
-        type
-      end
-
-      def number_of_additonal_actions
-        0
-      end
-
-      def number_of_additional_buys
-        0
-      end
-
-      def number_of_additional_cards
-        0
-      end
-
-      def number_of_additional_gold
-        0
+      def setup
+        super
+        @type    = :action
+        @subtype = type
+        @actions = 0
+        @buys    = 0
+        @cards   = 0
+        @gold    = 0
       end
 
       def special_action
@@ -32,15 +20,15 @@ module Dominion
       end
 
       def additional_actions?
-        number_of_additional_actions > 0
+        actions > 0
       end
 
       def additional_buys?
-        number_of_additional_buys > 0
+        buys > 0
       end
 
       def additional_cards?
-        number_of_additional_cards > 0
+        cards > 0
       end
 
       def special_action?

@@ -6,6 +6,7 @@ module Dominion
       attr_reader :type
 
       def setup
+        super
         @type = :victory_point
       end
 

@@ -3,16 +3,13 @@ require 'dominion/cards/victory_point_cards/victory_point_base'
 module Dominion
   module Cards
     class Estate < Dominion::Cards::VictoryPointBase
-      def name
-        "Estate"
-      end
+      attr_reader :name, :cost, :value
 
-      def cost
-        2
-      end
-
-      def value
-        1
+      def setup
+        super
+        @name  = "Estate"
+        @cost  = 2
+        @value = 1
       end
     end
   end

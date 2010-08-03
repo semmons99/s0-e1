@@ -3,8 +3,11 @@ require 'dominion/cards/base'
 module Dominion
   module Cards
     class TreasureCardBase < Dominion::Cards::Base
-      def type
-        :treasure
+      attr_reader :type
+
+      def setup
+        super
+        @type = :treasure
       end
 
       def value

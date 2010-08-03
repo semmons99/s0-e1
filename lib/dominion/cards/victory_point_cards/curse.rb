@@ -3,16 +3,13 @@ require 'dominion/cards/victory_point_cards/victory_point_base'
 module Dominion
   module Cards
     class Curse < Dominion::Cards::VictoryPointBase
-      def name
-        "Curse"
-      end
+      attr_reader :name, :cost, :value
 
-      def cost
-        1
-      end
-
-      def value
-        -1
+      def setup
+        super
+        @name  = "Curse"
+        @cost  = 1
+        @value = -1
       end
     end
   end

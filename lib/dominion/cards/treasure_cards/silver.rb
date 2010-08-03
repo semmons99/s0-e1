@@ -3,16 +3,13 @@ require 'dominion/cards/treasure_cards/treasure_card_base'
 module Dominion
   module Cards
     class Silver < Dominion::Cards::TreasureCardBase
-      def name
-        "Silver"
-      end
+      attr_reader :name, :cost, :value
 
-      def cost
-        3
-      end
-
-      def value
-        2
+      def setup
+        super
+        @name  = "Silver"
+        @cost  = 3
+        @value = 2
       end
     end
   end
