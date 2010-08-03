@@ -7,6 +7,10 @@ module Dominion
         "Estate"
       end
 
+      def cost
+        2
+      end
+
       def value
         1
       end

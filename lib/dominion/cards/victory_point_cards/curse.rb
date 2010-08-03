@@ -7,6 +7,10 @@ module Dominion
         "Curse"
       end
 
+      def cost
+        1
+      end
+
       def value
         -1
       end

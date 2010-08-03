@@ -7,6 +7,10 @@ module Dominion
         "Duchy"
       end
 
+      def cost
+        5
+      end
+
       def value
         3
       end

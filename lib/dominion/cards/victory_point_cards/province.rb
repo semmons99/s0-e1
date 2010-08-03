@@ -7,6 +7,10 @@ module Dominion
         "Province"
       end
 
+      def cost
+        8
+      end
+
       def value
         6
       end
