@@ -10,8 +10,8 @@ module Dominion
       end
 
       def special_action
-        n = owner.hand.discard.cost + 3
-        owner.buy(n)
+        n = owner.hand.discard(1, :type => :treasure).value + 3
+        owner.buy(n, :type => :treasure)
       end
     end
   end
