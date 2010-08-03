@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Copper"
         @cost  = 0
         @value = 1
       end

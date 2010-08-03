@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Estate"
         @cost  = 2
         @value = 1
       end

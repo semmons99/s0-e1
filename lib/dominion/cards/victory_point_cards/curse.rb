@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Curse"
         @cost  = 1
         @value = -1
       end

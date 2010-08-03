@@ -5,7 +5,6 @@ module Dominion
     class Cellar < Dominion::Cards::ActionBase
       def setup
         super
-        @name    = "Cellar"
         @cost    = 2
         @actions = 1
       end

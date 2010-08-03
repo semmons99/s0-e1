@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Gold"
         @cost  = 6
         @value = 3
       end

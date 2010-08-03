@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Gardens"
         @cost  = 4
       end
 

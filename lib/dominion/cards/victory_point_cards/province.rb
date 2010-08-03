@@ -7,7 +7,6 @@ module Dominion
 
       def setup
         super
-        @name  = "Province"
         @cost  = 8
         @value = 6
       end

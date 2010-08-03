@@ -1,20 +1,17 @@
 module Dominion
   module Cards
     class Base
-      attr_reader :game, :owner
+      attr_reader :game, :owner, :name
 
       def initialize(game, owner = nil)
         @game  = game
         @owner = owner
+        @name  = self.class
         setup
       end
 
       def setup
         raise NotImplementedError, "#setup must be implemented"
-      end
-
-      def name
-        raise NotImplementedError, "#name must be implemented"
       end
 
       def type

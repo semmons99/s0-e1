@@ -5,7 +5,6 @@ module Dominion
     class Market < Dominion::Cards::ActionBase
       def setup
         super
-        @name    = "Market"
         @cost    = 5
         @actions = 1
         @buys    = 1
