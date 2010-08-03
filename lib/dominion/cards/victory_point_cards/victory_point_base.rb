@@ -3,8 +3,10 @@ require 'dominion/cards/base'
 module Dominion
   module Cards
     class VictoryPointBase < Dominion::Cards::Base
-      def type
-        :victory_point
+      attr_reader :type
+
+      def setup
+        @type = :victory_point
       end
 
       def value
