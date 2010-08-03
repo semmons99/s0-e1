@@ -8,7 +8,7 @@ module Dominion
       end
 
       def value
-        raise NotImplementedError, "#value must be implmeneted"
+        raise NotImplementedError, "#value must be implemented"
       end
     end
   end
