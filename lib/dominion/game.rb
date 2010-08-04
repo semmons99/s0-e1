@@ -1,5 +1,6 @@
 require 'dominion/player'
 require 'dominion/cards'
+require 'highline/import'
 
 module Dominion
   class Game
@@ -19,6 +20,10 @@ module Dominion
       number_of_players.times do
         @players << Player.new(self, @cards.starter_deck)
       end
+    end
+
+    def prompt_user(question)
+      ask(question)
     end
   end
 end
