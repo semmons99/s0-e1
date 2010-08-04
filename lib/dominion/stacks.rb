@@ -2,15 +2,11 @@ ACTIONS        = %w(Cellar Market Militia Moat Remodel Smithy Village Woodcutter
 TREASURES      = %w(Copper Silver Gold)
 VICTORY_POINTS = %w(Estate Duchy Province)
 
-[ACTIONS, TREASURES, VICTORY_POINTS].each do |ns|
-  ns.each do |n|
-    require "dominion/cards/actions/#{n.downcase}"
+%w(ACTIONS TREASURES VICTORY_POINTS).each do |ns|
+  eval(ns).each do |n|
+    require "dominion/cards/#{ns.downcase}/#{n.downcase}"
   end
 end
-
-TREASURES.each do |n|
-
-include Cominions::Cards
 
 module Dominion
   class Stacks
@@ -46,7 +42,7 @@ module Dominion
     private
 
     def generate_stack(game, stack, name, num)
-      num.times{stack[name] << eval(name).new(game)}
+      num.times{stack[name] << eval("Dominion::Cards::#{name}").new(game)}
     end
   end
 end
