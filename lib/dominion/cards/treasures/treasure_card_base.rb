@@ -6,7 +6,6 @@ module Dominion
       attr_reader :type
 
       def setup
-        super
         @type = :treasure
       end
 

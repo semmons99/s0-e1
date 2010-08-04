@@ -6,7 +6,6 @@ module Dominion
       attr_reader :type, :subtype, :actions, :buys, :cards, :gold
 
       def setup
-        super
         @type    = :action
         @subtype = type
         @actions = 0
