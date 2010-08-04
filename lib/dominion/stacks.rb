@@ -13,7 +13,7 @@ TREASURES.each do |n|
 include Cominions::Cards
 
 module Dominion
-  class Cards
+  class Stacks
     attr_reader :treasures, :actions, :victory_points
 
     def initialize(game)
