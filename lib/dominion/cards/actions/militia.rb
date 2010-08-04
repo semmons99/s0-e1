@@ -11,10 +11,10 @@ module Dominion
       end
 
       def special_action
-        game.players.each do |player|
-          next if player == owner
+        @game.players.each do |player|
+          next if player == @owner
           next if player.hand.length <= 3
-          player.hand.discard(player.hand.length - 3)
+          player.discard(player.hand.length - 3)
         end
       end
     end
