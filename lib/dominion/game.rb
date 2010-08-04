@@ -1,5 +1,5 @@
 require 'dominion/player'
-require 'dominion/cards'
+require 'dominion/stacks'
 require 'highline/import'
 
 module Dominion
