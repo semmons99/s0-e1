@@ -1,4 +1,4 @@
-require 'dominion/cards/action_cards/action_base'
+require 'dominion/cards/actions/action_base'
 
 module Dominion
   module Cards

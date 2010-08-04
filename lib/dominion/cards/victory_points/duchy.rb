@@ -1,4 +1,4 @@
-require 'dominion/cards/victory_point_cards/victory_point_base'
+require 'dominion/cards/victory_points/victory_point_base'
 
 module Dominion
   module Cards

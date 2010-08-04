@@ -1,4 +1,4 @@
-require 'dominion/cards/treasure_cards/treasure_card_base'
+require 'dominion/cards/treasures/treasure_card_base'
 
 module Dominion
   module Cards
