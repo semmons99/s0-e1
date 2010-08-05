@@ -1,34 +1,41 @@
 module Dominion
   class Player
-    attr_reader :deck, :hand, :discard
+    attr_reader :deck, :hand, :discarded
 
     def initialize(game, deck)
-      @game    = game
-      @deck    = deck
-      @hand    = []
-      @discard = []
+      @game      = game
+      @deck      = deck
+      @hand      = []
+      @discarded = []
     end
 
     def shuffle
-      @deck = @deck + @discard
+      @deck = @deck + @discarded
       @deck = @deck.shuffle
+      @deck
     end
 
-    def draw(n)
-      n.times do
-        shuffle if @deck.length == 0
-        @hand += @deck.pop
+    def draw(n = 1)
+      if n > @deck.length + @discarded.length
+        raise "more cards requested than available"
       end
+
+      n.times do
+        self.shuffle if @deck.length == 0
+        @hand << @deck.pop
+      end
+      @hand
     end
 
     def discard(card = nil)
       return if @hand.length == 0
       if card.nil?
         @hand = @hand.shuffle
-        @discard += @hand.pop
+        @discarded << @hand.pop
       else
-        @discard += @hand.delete(card)
+        @discarded << @hand.delete(card)
       end
+      nil
     end
   end
 end
