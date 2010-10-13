@@ -1,10 +1,7 @@
 require 'rubygems'
 require 'rake'
 
-require 'spec/rake/spectask'
-Spec::Rake::SpecTask.new(:test) do |s|
-  s.libs << 'lib' << 'spec'
-  s.spec_files = FileList['spec/**/*_spec.rb']
-end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
 
-task :default => :test
+task :default => :spec
